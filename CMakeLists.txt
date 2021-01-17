@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(Qt5Widgets REQUIRED)
 
-set(SOURCE_FILES main.cpp Subject.h Observer.h)
+set(SOURCE_FILES main.cpp Subject.h Observer.h MainWindow.cpp MainWindow.h)
 
 add_executable(Laboratorio_Programmazione main.cpp)
 add_library(core ${SOURCE_FILES})
