@@ -7,7 +7,7 @@
 
 class File {
 public:
-    File(const char* filepath);
+    explicit File(const char* filepath);
     ~File();
 
     int getSIze() const {
