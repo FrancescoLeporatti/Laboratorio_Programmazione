@@ -11,6 +11,6 @@ TEST(TestFile, testOpeningNonExistingFile) {
 
 TEST(TestFile, testFileSize) {
     File file("../../Files/morgagni.jpg");
-    ASSERT_EQ(file.getSIze(),62583);
-    ASSERT_FALSE(file.getSIze() == 0);
+    ASSERT_EQ(file.getSize(),62583);
+    ASSERT_FALSE(file.getSize() == 0);
 }

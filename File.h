@@ -10,7 +10,7 @@ public:
     explicit File(const char* filepath);
     ~File();
 
-    int getSIze() const {
+    int getSize() const {
         return size;
     }
 
