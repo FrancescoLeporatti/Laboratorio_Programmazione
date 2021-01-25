@@ -61,10 +61,16 @@ void MainWindow::update(){
 
 void MainWindow::loadResources() {
 
-    text->setText("Ready to load resources\n");
+    text->setText("Ready to load resources...\n");
 
-    std::vector<const char*> filenames;
-    filenames.push_back("../Files/morgagni.jpg");
+    std::vector<const char*> files;
+    files.push_back("../Files/morgagni.jpeg");
+    files.push_back("../Files/santamarta.jpeg");
+    files.push_back("../Files/sunset.jpeg");
+    files.push_back("../Files/SampleText");
+    files.push_back("../Files/rotating_earth.gif");
 
-    loader->load(filenames);
+
+
+    loader->load(files);
 }

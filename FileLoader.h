@@ -35,7 +35,7 @@ public:
 private:
     std::list<Observer*> observers;
     bool loaded;
-    int numberOfFiles;
+    int numberOfFiles {0};
     QString filename;
     int filesize;
 };

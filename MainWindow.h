@@ -24,7 +24,6 @@ public:
 private slots:
     void loadResources();
 
-
 private:
     FileLoader* loader;
 
