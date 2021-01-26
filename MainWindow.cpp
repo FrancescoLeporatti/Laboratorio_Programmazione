@@ -49,9 +49,6 @@ void MainWindow::update(){
                       QString::number(loader->getFilesize()) + QString(" bytes).") + "\n";
         text->append(log);
 
-        QString progress = QString::number(progressBar->value() / 10) + QString("% resources loaded!");
-        button->setText(progress);
-
     } else {
 
         QString log = "Could not load '" + loader->getFilename() + QString("'");
@@ -61,16 +58,19 @@ void MainWindow::update(){
 
 void MainWindow::loadResources() {
 
-    text->setText("Ready to load resources...\n");
+    button->setText("Loading Files...");
 
     std::vector<const char*> files;
+
     files.push_back("../Files/morgagni.jpeg");
     files.push_back("../Files/santamarta.jpeg");
+    files.push_back("../Files/SampleText.txt");
     files.push_back("../Files/sunset.jpeg");
-    files.push_back("../Files/SampleText");
     files.push_back("../Files/rotating_earth.gif");
-
-
+    files.push_back("../Files/car.pdf");
+    files.push_back("../Files/screenshot.png");
+    files.push_back("../Files/SampleZip.zip");
 
     loader->load(files);
+    button->setText("Loading Completed");
 }
