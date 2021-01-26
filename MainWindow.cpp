@@ -42,15 +42,17 @@ MainWindow::MainWindow(FileLoader* fl, QWidget* parent) : loader(fl), QMainWindo
 void MainWindow::update(){
     if (loader->isLoaded()) {
 
+        // Update the progress bar by the same amount for each file loaded
         progressBar->setValue(progressBar->value() + (1000 / loader->getNumberOfFiles()));
 
-
+        // Update the text log when the loading is complete
         QString log = "Loaded'" + QString(loader->getFilename()) + QString("' successfully (") +
                       QString::number(loader->getFilesize()) + QString(" bytes).") + "\n";
         text->append(log);
 
     } else {
 
+        // Update the text log when the file couldn't be loaded
         QString log = "Could not load '" + loader->getFilename() + QString("'");
         text->append(log);
     }
@@ -62,6 +64,7 @@ void MainWindow::loadResources() {
 
     std::vector<const char*> files;
 
+    // Add files that need to be loaded to the vector
     files.push_back("../Files/morgagni.jpeg");
     files.push_back("../Files/santamarta.jpeg");
     files.push_back("../Files/SampleText.txt");

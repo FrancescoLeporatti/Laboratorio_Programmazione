@@ -13,9 +13,9 @@ void FileLoader::notify() {
         it->update();
 }
 
-void FileLoader::load(const std::vector<const char *>& filenames) {
+void FileLoader::load(const std::vector<const char *>& files) {
     try{
-        numberOfFiles = filenames.size();
+        numberOfFiles = files.size();
         if (!numberOfFiles)
             throw std::runtime_error("No files to load");
 
@@ -24,7 +24,8 @@ void FileLoader::load(const std::vector<const char *>& filenames) {
 
     }
 
-    for (auto it : filenames){
+    // Only executes this code if there is at least 1 file to load
+    for (auto it : files){
         try {
             File file(it);
             filename = QString(it);

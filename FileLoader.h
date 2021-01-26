@@ -10,7 +10,7 @@
 
 class FileLoader : public Subject {
 public:
-    void load(const std::vector<const char*>& filenames);
+    void load(const std::vector<const char*>& files);
 
     void addObserver(Observer* o) override;
     void removeObserver(Observer* o) override;
@@ -34,8 +34,10 @@ public:
 
 private:
     std::list<Observer*> observers;
-    bool loaded;
     int numberOfFiles {0};
+
+    // Attributes regarding the current file that is being loaded
+    bool loaded;
     QString filename;
     int filesize;
 };
