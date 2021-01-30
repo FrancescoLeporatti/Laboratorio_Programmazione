@@ -65,14 +65,14 @@ void MainWindow::loadResources() {
     std::vector<const char*> files;
 
     // Add files that need to be loaded to the vector
-    files.push_back("../Files/morgagni.jpeg");
-    files.push_back("../Files/santamarta.jpeg");
-    files.push_back("../Files/SampleText.txt");
-    files.push_back("../Files/sunset.jpeg");
-    files.push_back("../Files/rotating_earth.gif");
-    files.push_back("../Files/car.pdf");
-    files.push_back("../Files/screenshot.png");
-    files.push_back("../Files/SampleZip.zip");
+    files.push_back("./Files/morgagni.jpeg");
+    files.push_back("./Files/santamarta.jpeg");
+    files.push_back("./Files/SampleText.txt");
+    files.push_back("./Files/sunset.jpeg");
+    files.push_back("./Files/rotating_earth.gif");
+    files.push_back("./Files/car.pdf");
+    files.push_back("./Files/screenshot.png");
+    files.push_back("./Files/SampleZip.zip");
 
     loader->load(files);
     button->setText("Loading Completed");
