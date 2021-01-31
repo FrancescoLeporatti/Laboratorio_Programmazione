@@ -46,7 +46,7 @@ void MainWindow::update(){
         progressBar->setValue(progressBar->value() + (1000 / loader->getNumberOfFiles()));
 
         // Update the text log when the loading is complete
-        QString log = "Loaded'" + QString(loader->getFilename()) + QString("' successfully (") +
+        QString log = "Loaded '" + QString(loader->getFilename()) + QString("' successfully (") +
                       QString::number(loader->getFilesize()) + QString(" bytes).") + "\n";
         text->append(log);
 
@@ -65,14 +65,14 @@ void MainWindow::loadResources() {
     std::vector<const char*> files;
 
     // Add files that need to be loaded to the vector
-    files.push_back("./Files/morgagni.jpeg");
-    files.push_back("./Files/santamarta.jpeg");
-    files.push_back("./Files/SampleText.txt");
-    files.push_back("./Files/sunset.jpeg");
-    files.push_back("./Files/rotating_earth.gif");
-    files.push_back("./Files/car.pdf");
-    files.push_back("./Files/screenshot.png");
-    files.push_back("./Files/SampleZip.zip");
+    files.push_back("morgagni.jpeg");
+    files.push_back("santamarta.jpeg");
+    files.push_back("SampleText.txt");
+    files.push_back("sunset.jpeg");
+    files.push_back("rotating_earth.gif");
+    files.push_back("car.pdf");
+    files.push_back("screenshot.png");
+    files.push_back("SampleZip.zip");
 
     loader->load(files);
     button->setText("Loading Completed");
