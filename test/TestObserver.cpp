@@ -3,7 +3,7 @@
 
 
 TEST(TestObserver, testNumberOfUpdates){
-    std::vector<const char*> files;
+    std::vector<std::string> files;
     FileLoader loader;
     ConcreteObserver observer(&loader);
     files.push_back("morgagni.jpeg");

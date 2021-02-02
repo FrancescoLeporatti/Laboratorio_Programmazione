@@ -7,7 +7,7 @@
 
 class File {
 public:
-    explicit File(const char* filepath);
+    explicit File(std::string filename);
     ~File();
 
     int getSize() const {
@@ -15,6 +15,7 @@ public:
     }
 
 private:
+    std::string name;
     int size {0};
     FILE* file;
 };

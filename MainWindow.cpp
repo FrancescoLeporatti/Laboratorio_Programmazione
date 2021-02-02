@@ -62,7 +62,7 @@ void MainWindow::loadResources() {
 
     button->setText("Loading Files...");
 
-    std::vector<const char*> files;
+    std::vector<std::string> files;
 
     // Add files that need to be loaded to the vector
     files.push_back("morgagni.jpeg");

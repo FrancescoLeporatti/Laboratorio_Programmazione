@@ -2,7 +2,7 @@
 #include "../FileLoader.h"
 
 TEST(TestFileLoader, testLoading){
-    std::vector<const char*> files;
+    std::vector<std::string> files;
     FileLoader loader;
     files.push_back("morgagni.jpeg");
     loader.load(files);
@@ -10,7 +10,7 @@ TEST(TestFileLoader, testLoading){
 }
 
 TEST(TestFileLoader, testNonExistingFileLoading){
-    std::vector<const char*> files;
+    std::vector<std::string> files;
     FileLoader loader;
     files.push_back("morgangi.jpeg");
     loader.load(files);
@@ -18,7 +18,7 @@ TEST(TestFileLoader, testNonExistingFileLoading){
 }
 
 TEST(TestFileLoader, testNumberOfFiles){
-    std::vector<const char*> files;
+    std::vector<std::string> files;
     FileLoader loader;
     files.push_back("morgagni.jpeg");
     loader.load(files);
@@ -26,7 +26,7 @@ TEST(TestFileLoader, testNumberOfFiles){
 }
 
 TEST(TestFileLoader, testNoFiles){
-    std::vector<const char*> files;
+    std::vector<std::string> files;
     FileLoader loader;
     loader.load(files);
     ASSERT_EQ(loader.getNumberOfFiles(), 0);

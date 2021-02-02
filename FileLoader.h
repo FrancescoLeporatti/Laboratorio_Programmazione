@@ -10,7 +10,7 @@
 
 class FileLoader : public Subject {
 public:
-    void load(const std::vector<const char*>& files);
+    void load(const std::vector<std::string>& files);
 
     void addObserver(Observer* o) override;
     void removeObserver(Observer* o) override;

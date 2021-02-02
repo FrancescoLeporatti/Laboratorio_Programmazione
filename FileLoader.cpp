@@ -13,7 +13,7 @@ void FileLoader::notify() {
         it->update();
 }
 
-void FileLoader::load(const std::vector<const char *>& files) {
+void FileLoader::load(const std::vector<std::string>& files) {
     try{
         numberOfFiles = files.size();
         if (!numberOfFiles)
@@ -28,14 +28,14 @@ void FileLoader::load(const std::vector<const char *>& files) {
     for (auto it : files){
         try {
             File file(it);
-            filename = QString(it);
+            filename = QString(it.c_str());
             filesize = file.getSize();
             loaded = true;
             notify();
 
         } catch(std::runtime_error& e){
             std::cerr << e.what() << std::endl;
-            filename = QString(it);
+            filename = QString(it.c_str());
             loaded = false;
             notify();
 
